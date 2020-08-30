@@ -1,0 +1,46 @@
+//permisos de administrador en la ejecución de linux
+sudo
+
+//Cambiar de unidad y carpeta en el bash
+cd /G/Practicas/Git
+
+//Se muestran todas las configuraciones de Git.
+git config
+
+//Mostrar la ruta de los párametros modificados
+git config --list --show-origin
+
+//Se muestra la configuración de Git.
+git config --list
+
+//Configurar el nombre de usuario para registrar las modificaciones
+git config --global user.name "Nombre de Usuario"
+
+//configurar la cuenta de correo del usuario que realizara las modificaciones
+git config --global user.email "usuario@correo.com"
+
+//Inscibe la carpeta en el controlador de versiones de Git.
+git init
+
+//Adiciona un archivo a Git.
+git add nombreArchivo.txt
+//Adiciona todos los archivos ubicados en el repositorio
+git add .
+
+
+//Confirma la actualización de cambios realizados en Git y se adiciona un comentario.
+git commit -m "Un comentario!!!"
+
+//Conocer el estatus del repositorio
+git status
+
+//Conocer las modificaciones a través de la historia realizadas sobre un archivo.
+git log nombreArchivo.txt
+
+//Enviar el hacia un repositorio remoto.
+git push
+
+//Traer de un repositorio remoto hacia un ruta local
+git pull
+
+
