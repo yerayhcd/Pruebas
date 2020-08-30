@@ -27,7 +27,6 @@ git add nombreArchivo.txt
 //Adiciona todos los archivos ubicados en el repositorio
 git add .
 
-
 //Confirma la actualización de cambios realizados en Git y se adiciona un comentario.
 git commit -m "Un comentario!!!"
 
