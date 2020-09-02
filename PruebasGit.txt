@@ -52,7 +52,6 @@ code nombreArchivo.txt
 //para salir de esta ventana hay que pedir ayuda, gritar o hacer un curso.
 
 //se debe presionar las teclas
-Esc
-Shift
+Esc + Shift
 z
 z
