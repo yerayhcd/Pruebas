@@ -44,3 +44,6 @@ git pull
 
 //Consultar las modificaciones realizadas sobre el archivo
 git show nombreArchivo.txt
+
+//Para abrir un archivo directamente en Visual Studio Code
+code nombreArchivo.txt
