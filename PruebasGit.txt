@@ -42,4 +42,5 @@ git push
 //Traer de un repositorio remoto hacia un ruta local
 git pull
 
-
+//Consultar las modificaciones realizadas sobre el archivo
+git show nombreArchivo.txt
