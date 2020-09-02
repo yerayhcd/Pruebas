@@ -47,3 +47,12 @@ git show nombreArchivo.txt
 
 //Para abrir un archivo directamente en Visual Studio Code
 code nombreArchivo.txt
+
+//Al momento de no hacer commentarios en el commit Git muestra una ventana solicitando el mensaje
+//para salir de esta ventana hay que pedir ayuda, gritar o hacer un curso.
+
+//se debe presionar las teclas
+Esc
+Shift
+z
+z
