@@ -52,6 +52,8 @@ code nombreArchivo.txt
 //para salir de esta ventana hay que pedir ayuda, gritar o hacer un curso.
 
 //se debe presionar las teclas
-Esc + Shift
-z
-z
+Esc + Shift + z + z
+
+//En cualquier momento se puede obtener las diferencias en las versiones guardadas por Git.
+1. obtener la llave de la modificación, es un número largo que se ve despues de la palabra commit cuando se ejecuta la instrucción
+git Log nombreArchivo.txt
