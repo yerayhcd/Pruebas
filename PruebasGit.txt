@@ -63,4 +63,7 @@ git diff 49c875e94085c8a3d3668e5a2e271c75b6d899fc f4d1cbc2b74c97c5414481433240b6
 // y en rojo se muestra lo nuevo y en verde a versión anterior si existe.
 
 //Si quiero devolver el archivo a una versión anterior se utilisa git reset
-git reset ba8581e1e286bec484ab662a1b82ca62be0c8f2f
+git reset 557800ab58b6eb223825c5e793ac8293a2f37f8d --hard
+
+1. --hard devuelve todo a la versión escogida.
+2. --soft deja en staying las modificaciones realizadas para validar.
