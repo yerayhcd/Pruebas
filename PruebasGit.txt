@@ -57,3 +57,7 @@ Esc + Shift + z + z
 //En cualquier momento se puede obtener las diferencias en las versiones guardadas por Git.
 1. obtener la llave de la modificación, es un número largo que se ve despues de la palabra commit cuando se ejecuta la instrucción
 git Log nombreArchivo.txt
+2. ejecutar la siguiente instrucción
+git diff 49c875e94085c8a3d3668e5a2e271c75b6d899fc f4d1cbc2b74c97c5414481433240b62edd50a7fe
+3. La forma correcta es colocar la versión mas reciente primero y posterior la mas antigua.
+// y en rojo se muestra lo nuevo y en verde a versión anterior si existe.
