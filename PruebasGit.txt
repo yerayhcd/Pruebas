@@ -66,7 +66,7 @@ git diff 49c875e94085c8a3d3668e5a2e271c75b6d899fc f4d1cbc2b74c97c5414481433240b6
 git reset 557800ab58b6eb223825c5e793ac8293a2f37f8d --hard
 
 1. --hard devuelve todo a la versión escogida.
-2. --soft deja en staying las modificaciones realizadas para validar.
+2. --soft deja en Staging las modificaciones realizadas para validar.
 
 //cuando se ha creado un archivo y se adiciona pero sin commit, el archivo posteriormente puede ser modicado y con git status 
 //se pueden visualizar las modificaciones realizadas despues del add con -    git diff
@@ -78,5 +78,19 @@ git log --stat
 
 //con la letra q se puede salir de la instrucción.
 
-para ver archivos en versiones previas se debe buscar la identificación de la versión y el nombre del archivo, OJO no se debe hacer commit.
-git
+//para ver archivos en versiones previas se debe buscar la identificación de la versión y el nombre del archivo, OJO no se debe hacer commit.
+git checkout 39f8e2ca24cc50bea4649b589b5ce751a9002006 Post.html
+
+//para volver a obtener la versión registrada en master = "Get Latest version"
+git checkout master Post.html
+
+//Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.
+git rm --cached
+
+//Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro
+//de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
+git rm --force
+
+//Este es el comando para sacar archivos del área de Staging. No para borrarlos ni nada de eso, 
+//solo para que los últimos cambios de estos archivos no se envíen al último commit.
+git reset HEAD
