@@ -67,3 +67,8 @@ git reset 557800ab58b6eb223825c5e793ac8293a2f37f8d --hard
 
 1. --hard devuelve todo a la versión escogida.
 2. --soft deja en staying las modificaciones realizadas para validar.
+
+//cuando se ha creado un archivo y se adiciona pero sin commit, el archivo posteriormente puede ser modicado y con git status 
+//se pueden visualizar las modificaciones realizadas despues del add con -    git diff
+git diff
+//se muestra un + en verde con las adiciones y un - en rojo para lo eliminado
