@@ -97,3 +97,10 @@ git reset HEAD
 
 //para crear la rama se utiliza 'git branch nombreRama'
 git branch nombreRama
+
+//Para conocer las ramas creadas se utiliza el comando branch y en verde mostrara sobr la cual se encuentra Git.
+git branch
+
+//Para realizar el merge siempre debo estar dentro de la rama a la cual quiero actualizar "por lo general el tronco"
+//o en casos atipicos actualizar una rama con modificaciones realizadas en otras ramas o desde el tronco.
+git merge
