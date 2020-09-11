@@ -95,5 +95,11 @@ git rm --force
 //solo para que los últimos cambios de estos archivos no se envíen al último commit.
 git reset HEAD
 
-//para crear la rama se utiliza 'git branch nombreRama'
+//para crear la rama se utiliza 'git branch nombreRama' y al utilizar el git show el 'HEAD apunta a master y a la rama creada'
 git branch nombreRama
+
+//Para cambiar de rama se hace con checkout, en el apuntador se debe ver el cambio.
+git checkout nombreRama
+
+//Para volver al tronco se vuelve con checkout
+git checkout master
