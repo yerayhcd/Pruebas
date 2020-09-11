@@ -103,3 +103,6 @@ git checkout nombreRama
 
 //Para volver al tronco se vuelve con checkout
 git checkout master
+
+//para hacer add y commit al mismo tiempo se puede utilizar commit -am
+git commit -am "Mensaje de referencia para el commit"
