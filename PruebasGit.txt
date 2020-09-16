@@ -113,3 +113,7 @@ git commit -am "Mensaje de referencia para el commit"
 //Para realizar el merge siempre debo estar dentro de la rama a la cual quiero actualizar "por lo general el tronco"
 //o en casos atipicos actualizar una rama con modificaciones realizadas en otras ramas o desde el tronco.
 git merge
+
+//Para subir desde un repositorio local hacia Git Hub
+//git remote add origin url 
+git remote add origin https://github.com/yerayhcd/Pruebas.git
