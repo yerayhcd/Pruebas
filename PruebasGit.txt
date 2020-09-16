@@ -124,6 +124,13 @@ git remote
 //Para conocer de forma verval o explicita las ramas remotas
 git remote -v
 
+//para taer las modificaciones existentes en Git Hub para que posteriormente se pueda hacer el push
+git pull origin master 
+
+//para poder fusionar las historias del remoto y del local en caso de que se muestre el mensaje
+//fatal: refusing to merge unrelated histories.
+git pull origin master --allow-unrelated-histories
+
 //para enviar la versión de master a Git Hub.
 git push origin master
 
