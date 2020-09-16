@@ -95,11 +95,20 @@ git rm --force
 //solo para que los últimos cambios de estos archivos no se envíen al último commit.
 git reset HEAD
 
-//para crear la rama se utiliza 'git branch nombreRama'
-git branch nombreRama
-
 //Para conocer las ramas creadas se utiliza el comando branch y en verde mostrara sobr la cual se encuentra Git.
 git branch
+
+//para crear la rama se utiliza 'git branch nombreRama' y al utilizar el git show el 'HEAD apunta a master y a la rama creada'
+git branch nombreRama
+
+//Para cambiar de rama se hace con checkout, en el apuntador se debe ver el cambio.
+git checkout nombreRama
+
+//Para volver al tronco se vuelve con checkout
+git checkout master
+
+//para hacer add y commit al mismo tiempo se puede utilizar commit -am
+git commit -am "Mensaje de referencia para el commit"
 
 //Para realizar el merge siempre debo estar dentro de la rama a la cual quiero actualizar "por lo general el tronco"
 //o en casos atipicos actualizar una rama con modificaciones realizadas en otras ramas o desde el tronco.
