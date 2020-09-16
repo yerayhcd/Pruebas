@@ -117,3 +117,13 @@ git merge
 //Para subir desde un repositorio local hacia Git Hub
 //git remote add origin url 
 git remote add origin https://github.com/yerayhcd/Pruebas.git
+
+//para conocer las ramas remotas
+git remote
+
+//Para conocer de forma verval o explicita las ramas remotas
+git remote -v
+
+//para enviar la versión de master a Git Hub.
+git push origin master
+
