@@ -134,3 +134,33 @@ git pull origin master --allow-unrelated-histories
 //para enviar la versión de master a Git Hub.
 git push origin master
 
+//instrucción para crear las llaves públicas y privadas con SSH Security Shell.
+//ssh-keygen -t rsa -b 4096 -C "correo@email.com"
+ssh-keygen -t -rsa -b 4096 -C "yerayhcd@gmail.com"
+
+//Se puede colocar un "passphrase" que es una contraseña adicional sobre la llave privada.
+
+//En windows y Linux se debe verificar que el servidor de SSH este "enabled", se debe recibir el número de PID.
+eval $(ssh-agent -s)
+
+//Se debe agregar la llave privada, que debe estar en la ruta definida al momento de crearla
+//con "pwd" se puede conocer la ruta
+//ssh-add rutaEscogida/id_rsa
+ssh-add /g/Practicas/Git/id_rsa 
+
+//para registra la llave en GitHub se relizan los siguientes pasos.
+1. Ingresar al perfil del usuario.
+2. En el perfil seleccionar Settings.
+3. En el panel izquierdo buscar SSH and GPG keys
+4. En la ventana nueva hacer clic en el botón New SSH key.
+5. Asignar un nombre, título o descripción para su identificación.
+6. en el campo key se debe pegar la llave pública. generada en los pasos anteriores.
+7. Ingresar la contraseña de la plataforma.
+
+
+//despues de realizar la modificación o registro de la llave SSH, por ejemplo Git Hub
+//se puede actualizar el remote
+git remote set -url origin git@github.com:yerayhcd/Pruebas.git
+
+//al ejecutar git remote ya se debio actualizar la url de https a git@, se debe ejecuara antes y despues de la modificación realizada
+git remote -v
