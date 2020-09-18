@@ -164,3 +164,31 @@ git remote set -url origin git@github.com:yerayhcd/Pruebas.git
 
 //al ejecutar git remote ya se debio actualizar la url de https a git@, se debe ejecuara antes y despues de la modificación realizada
 git remote -v
+
+//Para visualizar graficamente en la consola la creación y commits de las ramas se utiliza graph.
+git log --all --graph
+
+//para visualizarlo un poco mas comprimido se utiliza.
+git log --all --graph --decorate --oneline
+
+//En linux se pueden utilizar alias para esos comandos que son largos o muy extensos y dificesles de aprender
+//alias nombreAlias="instrucción"
+alias arbolGit="git log --all --graph --decorate --oneline"
+
+//para llamarlo solo escribo elnombre asignado al alias.
+arbolGit
+
+//los tags son como puntos de referencia que se utilizan para identificar versiones o modificaciones puntuales.
+//Puedo crear tags con git pero conociendo los hash de las versiones
+//git tag -a nombreTag -m "Mensaje o comentario" hash
+git tag -a v0.01 -m "primeros pasos" c4356ef
+
+//Para visualizar la lista de los tags existentes se utiliza.
+git tag
+
+//para visualizar a que hash esta referenciando un tag de utiliza.
+git show-ref --tags
+
+//para enviar los tags a GitHub se utiliza, se recomienda hacer un pull antes de hacer cualquier commit.
+git push origin --tags
+
