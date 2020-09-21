@@ -192,3 +192,42 @@ git show-ref --tags
 //para enviar los tags a GitHub se utiliza, se recomienda hacer un pull antes de hacer cualquier commit.
 git push origin --tags
 
+//para borrar cualquier tag que es una copia de la versión al momento de la creación del hash
+git tag -d nombreTag
+//Se debe hacer el push de los tags
+git push origin --tags
+
+//para borrar en GitHub definitivamente se utiliza
+git push origin :refs/tags/nombreTag
+
+//para visualizar las ramas que existen se utiliza:
+git show-branch
+
+//para visualizar mas datos de las ramas que existen
+git show-branch --all
+
+//gitk es para visualizar la aplicación de escritorio de git ya instalada
+gitk
+
+//para enviar una rama se hace el mismo procedimiento que en master pero se debe ubicar primero en la rama que se nviara.
+git checkout nombreRama
+git push origin nombreRama
+
+//para mis pruebas hice
+git branch header
+git branch footer
+git push origin header
+git push origin footer
+
+
+//Para poder ser asignado a un proyecto de debe crear un email público
+1. Se ingresa Setting del usuario o colaborador del repositorio.
+2. Ingresar a la opción de Emails de la parte izquierda.
+3. En el campo "Add email address" si se quiere que sea visible.
+
+
+//para agregar un usuario nuevo al repositorio debe:
+1. Ingresar al Setting del repositorio
+2. Ingresar la opción collaborators
+3. en la casilla Search by username, full name o email address
+4. se puede ingresar cualquiera de los datos solicitados en el paso anterior.
