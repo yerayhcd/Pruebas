@@ -231,3 +231,16 @@ git push origin footer
 2. Ingresar la opción collaborators
 3. en la casilla Search by username, full name o email address
 4. se puede ingresar cualquiera de los datos solicitados en el paso anterior.
+
+//para omitir archivos que sean enviados al repositorio se debe crear un archivo .gitignore
+//se recomienda no enviar archivos binarios al repositorio
+//con el simbolo # se hacen comentarios dentro del archivo .gitignore
+//con el simbolo ! se da la instrucción de NO ignorar.
+
+//existe un ajuste por los lados o machete que se utiliza con 'rebase'
+//1. desde la rama que se utilizara para el 'rebase' se pega a las malas como ajustes realizados sobre la rama que se desea ajustar o el master
+//(ramaAjuste)
+git rebase master
+//2. desde la rama master se importan los ajustes realizados en la rama auxiliar que ya tiene sobreescrito la historia de modificaciones.
+//(master)
+git rebase ramaAjuste
