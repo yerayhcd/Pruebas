@@ -244,3 +244,27 @@ git rebase master
 //2. desde la rama master se importan los ajustes realizados en la rama auxiliar que ya tiene sobreescrito la historia de modificaciones.
 //(master)
 git rebase ramaAjuste
+
+//para borrar ramas '-D' borra completamente una rama del repositorio local o en linea.
+git branch -D ramaAjuste
+
+//Ayuda para no hacer commit a cambios que son temporales y que todavia no quiero confirmar en la rama. se usa Git Stash
+git stash
+
+//para ver esos ajustes en memoria se utiliza "wip" = work in progress.
+git stash list
+
+//despues de volver a la rama en donde tengo los ajustes en memoria, no se visualizan esos cambios pero se utiliza 'pop'
+git stash pop
+
+//pero si se quiere colocar esos ajustes en una rama diferente, no necesita el guión (-), es decorativo.
+git stash branch nombreRama-Stash
+
+//para eliminar definitivamente esos ajustes en memoria sin crear ramas o cosas así, 'drop'.
+git stash drop
+
+//para busar esos archivos que quiero borrar y que no van a enviarse definitivamente al repositorio se utiliza 'clean'
+git clean --dry--run
+//mostrara la lista de esos archivos que no se quieren enviar definitivamente al repositorio.
+//para confirmar esos cambios o archivos que se eliminaran se utiliza '-f'
+git clean -f
