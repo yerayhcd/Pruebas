@@ -267,4 +267,58 @@ git stash drop
 git clean --dry--run
 //mostrara la lista de esos archivos que no se quieren enviar definitivamente al repositorio.
 //para confirmar esos cambios o archivos que se eliminaran se utiliza '-f'
+//tambien omite esos archivos ignoradospor .gitignore
 git clean -f
+
+//Existe una especie de merge parcial desde ramas que ya tiene varios commit, y puedo importar alguno en particular sin importar cuando se realice.
+//se utiliza cherry-pick #hash, esta instrucción por lo general despues de hacer un merge adecuadamente , genera un error o conflicto porque encuentra las mismas modificaciones en las dos ramas.
+git cherry-pick c4356ef
+
+
+//En caso de hacer commits incompletos o que falto algún cambio se utiliza 'amend'.
+//Solo se puede hacer sobre el último commit e incluso permite modificar el texto o mensaje del commit
+1. Hice un commit y me falto algo !!!!!.
+2. Realizó los cambios pendientes por realizar.
+3. realizo git add nombreArchivo.txt.
+4. ejecuto el amend
+git commit --amend
+
+//en git existe un comando que muestra todo pero todo todito todo y támbien el HEAD de la modificación.
+//con esto encontramos ese HEAD y podemos devolver totos los archivos hasta ese punto como si no hubiera pasado nada.
+//git reflog solo es local y tambien conocer todo ir hacia adelante o hacia atras.
+1. git reflog, permite saber lo que paso de verdad verdad hacia adelante o hacia atras.
+git reflog
+2. copio el HEAD  :  HEAD@{4}   : por ejemplo y no se requiere del hash.
+3. Puedo irme con el reset hasta el commit que quiero como si colocara el apuntador en ese hash, pero sin actualizar o resetara archivos eliminados, como si los dejara en Staging, tambien permite ir hacia adelante o hacia atras.
+git reset HEAD@{2}
+4. validar si se hace un reset SOFT:que mantiene esas modificaciones del Staging o reset HARD:que reemplaza todo. eso si tambien borra todos los commit realizados despues de modificar el apuntador, tambien permite ir hacia adelante o hacia atras.
+git reset --HARD HEAD@{2}
+
+//Con git puedo realizar una busqueda en todos los archivos con 'grep'
+//git grep palabraBuscada
+git grep text
+
+//para conocer el número de la linea donde encontro mi resultado.
+git grep -n palabraBuscada
+
+//para conocer la cantidad de veces que aparece la palabraBuscada.
+git grep -c palabraBuscada
+
+//tambien puedo busar una palabra dentro de un commit realizado.
+git log -S "palabraBuscada"
+
+//Se puede personalizar comandos, que cumple casi la misma función que un alias.
+//a diferencia que queda dentro del proyecto y no solo en la máquina.
+1. La siguiente instrucción muestra el número de commits realizados por cada usuario a excepción de los merges.
+git shortlog -sn --all --no-merges
+2. Asigno sobre la configuración global ese comando personalizado.
+git config --global alias.estadistica "shortlog -sn --all --no-merges"
+
+//Por ultimo y casi ultimo, muestra la ayuda en una página web 
+git COMANDO --help
+
+//puedo ver las ramas remotas con
+git branch -r
+
+//Puedo ver todas la ramas, y cada vez que se hace un pull t´mbien se obtiene la historia de las ramas remotas.
+git branch -a
